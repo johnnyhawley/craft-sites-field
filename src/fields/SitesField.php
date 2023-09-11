@@ -206,7 +206,7 @@ class SitesField extends Field implements PreviewableFieldInterface
 	/**
 	 * @inheritdoc
 	 */
-	public function normalizeValue(mixed $value, ?ElementInterface $element = null): mixed
+	public function normalizeValue($value, ?craft\base\ElementInterface $element = NULL)
 	{
         if($this->allowMultiple && is_string($value)) {
             $value = json_decode($value);
